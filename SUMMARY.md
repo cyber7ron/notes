@@ -69,3 +69,4 @@
 
 * [1. introduction](bin_exp/intro/intro.md)
 	* [1.1 Assembly](bin_exp/intro/assembly.md)
+	* [1.2 Radare2](bin_exp/intro/radare2.md)

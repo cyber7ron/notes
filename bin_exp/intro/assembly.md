@@ -111,6 +111,17 @@ word is just two byte data. <br>
 dword is four byte of data <br>
 qword is eight byte of data.
 
+
+
+data tyep | suffix | size
+----------|--------|------
+bytes | b | 1
+word | w | 2
+Double word | l | 4
+Quad word | q | 8
+single precision | s | 4
+Double precision | l | 8
+
 **stack**
 
 stack is LIFO data structure and its where local variables in the code are stored. we can add or remove value from stack by either pushing them or popping them.
@@ -228,4 +239,68 @@ This is similar to the jmp instruction. The difference is it will push the value
 *jnz / jz*
 
 its similar to jump instruction , the diffrence here is it jump if specific flag is set. `jnz` : jump if not zero. `jz` jump if zero
+
+
+**some other important instruction**
+
+`leaq source, destination` : this instruction sets destination to the address denoted by the expression in source
+
+`addq source, destination`: destination = destination + source
+
+`subq source, destination`: destination = destination - source
+
+`imulq source, destination`: destination = destination * source
+
+`salq source, destination`: destination = destination << source where << is the left bit shifting operator
+
+`sarq source, destination`: destination = destination >> source where >> is the right bit shifting operator
+
+`xorq source, destination`: destination = destination XOR source
+
+`andq source, destination`: destination = destination & source
+
+`orq source, destination`: destination = destination | source
+
+***
+
+**conditional jump**
+
+If some specified condition is satisfied in conditional jump, the control flow is transferred to a target instruction.
+
+Following are the conditional jump instructions used on signed data used for arithmetic operations −
+
+Instruction |   Description |   Flags tested
+------------|---------------|----------------
+JE/JZ | Jump Equal or Jump Zero |   ZF
+JNE/JNZ |   Jump not Equal or Jump Not Zero |   ZF
+JG/JNLE |   Jump Greater or Jump Not Less/Equal |   OF, SF, ZF
+JGE/JNL |   Jump Greater/Equal or Jump Not Less |   OF, SF
+JL/JNGE |   Jump Less or Jump Not Greater/Equal |   OF, SF
+JLE/JNG |   Jump Less/Equal or Jump Not Greater |   OF, SF, ZF
+
+
+Following are the conditional jump instructions used on unsigned data used for logical operations −
+
+Instruction |   Description |   Flags tested 
+------------|---------------|-----------------
+JE/JZ | Jump Equal or Jump Zero |   ZF
+JNE/JNZ |   Jump not Equal or Jump Not Zero |   ZF
+JA/JNBE |   Jump Above or Jump Not Below/Equal|     CF, ZF
+JAE/JNB |   Jump Above/Equal or Jump Not Below |    CF
+JB/JNAE |   Jump Below or Jump Not Above/Equal |    CF
+JBE/JNA |   Jump Below/Equal or Jump Not Above |    AF, CF
+
+The following conditional jump instructions have special uses and check the value of flags −
+
+Instruction |   Description |   Flags tested
+-------------|---------------|--------------
+JXCZ |  Jump if CX is Zero |    none
+JC |    Jump If Carry | CF
+JNC |   Jump If No Carry |  CF
+JO  |Jump If Overflow   |OF
+JNO |   Jump If No Overflow |   OF
+JP/JPE |    Jump Parity or Jump Parity Even |   PF
+JNP/JPO |   Jump No Parity or Jump Parity Odd | PF
+JS  |Jump Sign (negative value) |   SF
+JNS |   Jump No Sign (positive value) | SF
 
