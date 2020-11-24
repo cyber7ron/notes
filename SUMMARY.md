@@ -60,7 +60,6 @@
 
 ### Active Directory Attacks
 
-* [index](active_dir/21_1.md)
 * [introduction to AD](active_dir/1.md)
 * [powershell](tools/4_3.md)
 * [Domain Enumeration](active_dir/2.md)
