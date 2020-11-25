@@ -63,6 +63,8 @@
 * [introduction to AD](active_dir/1.md)
 * [powershell](tools/4_3.md)
 * [Domain Enumeration](active_dir/2.md)
+* [Local Privilege Escalation](active_dir/priv_esca.md)
+* [User Hunting](active_dir/user_hunt.md)
 
 ### Binary Exploitation
 
