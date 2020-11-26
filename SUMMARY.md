@@ -65,9 +65,14 @@
 * [Domain Enumeration](active_dir/2.md)
 * [Local Privilege Escalation](active_dir/priv_esca.md)
 * [User Hunting](active_dir/user_hunt.md)
+* [Bloodhound](active_dir/bloodhound.md)
 
 ### Binary Exploitation
 
 * [1. introduction](bin_exp/intro/intro.md)
 	* [1.1 Assembly](bin_exp/intro/assembly.md)
 	* [1.2 Radare2](bin_exp/intro/radare2.md)
+
+### Networking
+
+### Crypto
