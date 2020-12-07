@@ -1,0 +1,1309 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.1 Assembly · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="radare2.html" />
+    
+    
+    <link rel="prev" href="intro.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting comfortable with linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../linux/2_4.html">
+            
+                <a href="../../linux/2_4.html">
+            
+                    
+                    finding your way around
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../linux/2_5.html">
+            
+                <a href="../../linux/2_5.html">
+            
+                    
+                    managing linux services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../linux/2_6.html">
+            
+                <a href="../../linux/2_6.html">
+            
+                    
+                    searching, installing, and removing tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../linux/permission_table.html">
+            
+                <a href="../../linux/permission_table.html">
+            
+                    
+                    Permission table
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Command line fun / Text -fu</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../linux/3_1.html">
+            
+                <a href="../../linux/3_1.html">
+            
+                    
+                    The Bash Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../linux/3_2.html">
+            
+                <a href="../../linux/3_2.html">
+            
+                    
+                    piping and redirection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../linux/3_3.html">
+            
+                <a href="../../linux/3_3.html">
+            
+                    
+                    Text searching and manipulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../linux/3_4.html">
+            
+                <a href="../../linux/3_4.html">
+            
+                    
+                    Editing files from cmd line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../linux/3_5.html">
+            
+                <a href="../../linux/3_5.html">
+            
+                    
+                    Comparing files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../linux/3_6.html">
+            
+                <a href="../../linux/3_6.html">
+            
+                    
+                    Managing process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../../linux/3_7.html">
+            
+                <a href="../../linux/3_7.html">
+            
+                    
+                    File and cmd Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../../linux/3_8.html">
+            
+                <a href="../../linux/3_8.html">
+            
+                    
+                    curl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../../linux/3_9.html">
+            
+                <a href="../../linux/3_9.html">
+            
+                    
+                    Customizing Bash environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Practical tools</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../tools/4_1.html">
+            
+                <a href="../../tools/4_1.html">
+            
+                    
+                    netcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../tools/4_3.html">
+            
+                <a href="../../tools/4_3.html">
+            
+                    
+                    powershell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../tools/wireshark.html">
+            
+                <a href="../../tools/wireshark.html">
+            
+                    
+                    Wireshark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../tools/tcpdump.html">
+            
+                <a href="../../tools/tcpdump.html">
+            
+                    
+                    tcpdump
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Bash Scripting</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../scripts/5_1.html">
+            
+                <a href="../../scripts/5_1.html">
+            
+                    
+                    intro to bash scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../scripts/5_2.html">
+            
+                <a href="../../scripts/5_2.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../scripts/5_3.html">
+            
+                <a href="../../scripts/5_3.html">
+            
+                    
+                    if,else,elif statement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../../scripts/5_4.html">
+            
+                <a href="../../scripts/5_4.html">
+            
+                    
+                    Boolean Logical Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../../scripts/5_5.html">
+            
+                <a href="../../scripts/5_5.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../../scripts/5_6.html">
+            
+                <a href="../../scripts/5_6.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Information Gathering</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../osint/6_2.html">
+            
+                <a href="../../osint/6_2.html">
+            
+                    
+                    Website Recon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../osint/6_4.html">
+            
+                <a href="../../osint/6_4.html">
+            
+                    
+                    Google Hakcing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../osint/6_6.html">
+            
+                <a href="../../osint/6_6.html">
+            
+                    
+                    Recon-ng
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../osint/6_7.html">
+            
+                <a href="../../osint/6_7.html">
+            
+                    
+                    open-source code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../osint/6_8.html">
+            
+                <a href="../../osint/6_8.html">
+            
+                    
+                    shodan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../osint/dns.html">
+            
+                <a href="../../osint/dns.html">
+            
+                    
+                    Dns enumeration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">File Transfers</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../file_transfer/16_1.html">
+            
+                <a href="../../file_transfer/16_1.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../../file_transfer/16_2.html">
+            
+                <a href="../../file_transfer/16_2.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../../file_transfer/upgrade_shell.html">
+            
+                <a href="../../file_transfer/upgrade_shell.html">
+            
+                    
+                    upgrading Non-interactive shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Antivirus Evasion</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../antivirus/17_1.html">
+            
+                <a href="../../antivirus/17_1.html">
+            
+                    
+                    what is antivirus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../../antivirus/17_2.html">
+            
+                <a href="../../antivirus/17_2.html">
+            
+                    
+                    Method of detecting malicious code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../../antivirus/17_3.html">
+            
+                <a href="../../antivirus/17_3.html">
+            
+                    
+                    Bypassing AV Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web Attacks</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../web/sql.html">
+            
+                <a href="../../web/sql.html">
+            
+                    
+                    sql injection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../web/sqli_to_shell.html">
+            
+                <a href="../../web/sqli_to_shell.html">
+            
+                    
+                    upload shell using sql injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Active Directory Attacks</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../active_dir/1.html">
+            
+                <a href="../../active_dir/1.html">
+            
+                    
+                    introduction to AD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../tools/4_3.html">
+            
+                <a href="../../tools/4_3.html">
+            
+                    
+                    powershell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../active_dir/2.html">
+            
+                <a href="../../active_dir/2.html">
+            
+                    
+                    Domain Enumeration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../../active_dir/priv_esca.html">
+            
+                <a href="../../active_dir/priv_esca.html">
+            
+                    
+                    Local Privilege Escalation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="../../active_dir/user_hunt.html">
+            
+                <a href="../../active_dir/user_hunt.html">
+            
+                    
+                    User Hunting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="../../active_dir/bloodhound.html">
+            
+                <a href="../../active_dir/bloodhound.html">
+            
+                    
+                    Bloodhound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="../../active_dir/lateral.html">
+            
+                <a href="../../active_dir/lateral.html">
+            
+                    
+                    Lateral Movement
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Binary Exploitation</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="intro.html">
+            
+                <a href="intro.html">
+            
+                    
+                    1. introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="11.1.1" data-path="assembly.html">
+            
+                <a href="assembly.html">
+            
+                    
+                    1.1 Assembly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="radare2.html">
+            
+                <a href="radare2.html">
+            
+                    
+                    1.2 Radare2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Sec 660</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../../sec660/">
+            
+                <a href="../../sec660/">
+            
+                    
+                    READme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Networking</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Crypto</li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >1.1 Assembly</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="introduction-to-assembly">Introduction to Assembly</h1>
+<p>all of this documentation will be for the Intel syntax.</p>
+<p><strong>Compiling</strong></p>
+<p>Assembly code is the code that actually runs on your computer by the processor. For instance take some C code:</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;Hello World!&quot;</span>);
+}
+</code></pre>
+<p>That code isn&apos;t ran. Thing is that code is compiled into assembly code, which looks like this:</p>
+<pre><code class="lang-asm">0000000000001135 &lt;main&gt;:
+    1135:       55                      push   rbp
+    1136:       48 89 e5                mov    rbp,rsp
+    1139:       48 8d 3d c4 0e 00 00    lea    rdi,[rip+0xec4]        # 2004 &lt;_IO_stdin_used+0x4&gt;
+    1140:       e8 eb fe ff ff          call   1030 &lt;puts@plt&gt;
+    1145:       90                      nop
+    1146:       5d                      pop    rbp
+    1147:       c3                      ret    
+    1148:       0f 1f 84 00 00 00 00    nop    DWORD PTR [rax+rax*1+0x0]
+    114f:       00
+</code></pre>
+<p>The purpose of languages like C, is that we can program without having to really deal with assembly code. We write code that is handed to a compiler, and the compiler takes that code and generates assembly code.Then the assembly code is what is actually ran on the processor.</p>
+<p>with assembly code, there is a lot of different architectures. Different types of processors can run different types of assembly code architectures. The two we are dealing with the most here will be 64 bit, and 32 bit ELF (Executable and Linkable Format). This also called as <code>x64</code> and <code>x86</code></p>
+<p><strong>Register</strong></p>
+<p>Registers are essentially places that the processor can store memory. You can think of them as buckets which the processor can store information in. Here is a list of the x64 registers, and what their common use cases are.</p>
+<pre><code>rbp: Base Pointer, points to the bottom of the current stack frame
+rsp: Stack Pointer, points to the top of the current stack frame
+rip: Instruction Pointer, points to the instruction to be executed
+
+General Purpose Registers
+These can be used for a variety of different things
+rax:
+rbx:
+rcx:
+rdx:
+rsi:
+rdi:
+r8:
+r9:
+r10:
+r11:
+r12:
+r13:
+r14:
+r15:
+</code></pre><p>In <code>x64</code> linux arguments to a function are passed via registers.</p>
+<pre><code>rdi:    First Argument
+rsi:    Second Argument
+rdx:    Third Argument
+rcx:    Fourth Argument
+r8:     Fifth Argument
+r9:     Sixth Argument
+</code></pre><p>with <code>86</code> elf architecture, argument are passed on the stack.<br>
+also one thing as you may know in C function can return a value.<br>
+ In <code>x64</code>, this value is passed in the <code>rax</code> register. In <code>x86</code> this value is passed in the <code>eax</code>register.</p>
+<p> Also one thing, there are different sizes for registers. These typical sizes we will be dealing with are 8 bytes, 4 bytes, 2 bytes, and 1. The reason for these different sizes is due to the advancement of technology, we can store more data in a register.   </p>
+<pre><code>-----------------+---------------+---------------+------------+
+| 8 Byte Register | Lower 4 Bytes | Lower 2 Bytes | Lower Byte |
++-----------------+---------------+---------------+------------+
+|   rbp           |     ebp       |     bp        |     bpl    |
+|   rsp           |     esp       |     sp        |     spl    |
+|   rip           |     eip       |               |            |
+|   rax           |     eax       |     ax        |     al     |
+|   rbx           |     ebx       |     bx        |     bl     |
+|   rcx           |     ecx       |     cx        |     cl     |
+|   rdx           |     edx       |     dx        |     dl     |
+|   rsi           |     esi       |     si        |     sil    |
+|   rdi           |     edi       |     di        |     dil    |
+|   r8            |     r8d       |     r8w       |     r8b    |
+|   r9            |     r9d       |     r9w       |     r9b    |
+|   r10           |     r10d      |     r10w      |     r10b   |
+|   r11           |     r11d      |     r11w      |     r11b   |
+|   r12           |     r12d      |     r12w      |     r12b   |
+|   r13           |     r13d      |     r13w      |     r13b   |
+|   r14           |     r14d      |     r14w      |     r14b   |
+|   r15           |     r15d      |     r15w      |     r15b   |
++-----------------+---------------+---------------+------------+
+</code></pre><p>In x64 we will see the 8 byte registers. However in x86 the largest sized registers we can use are the 4 byte registers like ebp, esp, eip etc. Now we can also use smaller registers, than the maximum sized registers for the architecture.</p>
+<p>In x64 there is the rax, eax, ax, and al register. The rax register points to the full 8. The eax register is just the lower four bytes of the rax register. The ax register is the last 2 bytes of the rax register. Lastly the al register is the last byte of the rax register.</p>
+<p><strong>words</strong></p>
+<p>word is just two byte data. <br>
+dword is four byte of data <br>
+qword is eight byte of data.</p>
+<table>
+<thead>
+<tr>
+<th>data tyep</th>
+<th>suffix</th>
+<th>size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bytes</td>
+<td>b</td>
+<td>1</td>
+</tr>
+<tr>
+<td>word</td>
+<td>w</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Double word</td>
+<td>l</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Quad word</td>
+<td>q</td>
+<td>8</td>
+</tr>
+<tr>
+<td>single precision</td>
+<td>s</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Double precision</td>
+<td>l</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>stack</strong></p>
+<p>stack is LIFO data structure and its where local variables in the code are stored. we can add or remove value from stack by either pushing them or popping them.</p>
+<p><code>rbp</code> : points to the bottom of the stack. <br>
+<code>rsp</code> : points to the top of the stack.</p>
+<p><strong>Flags</strong></p>
+<p>there is one register that contains flags. A flag is particular bit of this register.</p>
+<pre><code>00:     Carry Flag
+01:     always 1
+02:     Parity Flag
+03:     always 0
+04:     Adjust Flag
+05:     always 0
+06:     Zero Flag
+07:     Sign Flag
+08:     Trap Flag
+09:     Interruption Flag     
+10:     Direction Flag
+11:     Overflow Flag
+12:     I/O Privilege Field lower bit
+13:     I/O Privilege Field higher bit
+14:     Nested Task Flag
+15:     Resume Flag
+</code></pre><p><strong>Instructions</strong></p>
+<p><em>mov</em> : mov data to one register to another</p>
+<pre><code class="lang-asm">mov rax, rdx
+</code></pre>
+<p><em>dereference</em> : <br></p>
+<p>If you ever see brackets like [], they are meant to dereference, which deals with pointers. A pointer is a value that points to a particular memory address (it is a memory address). Dereferencing a pointer means to treat a pointer like the value it points to. For instance:</p>
+<pre><code class="lang-asm">mov rax, [rdx]
+
+# will move the value pointed to by rdx into the rax register.
+</code></pre>
+<pre><code>mov [rax], rdx 
+
+# Will move the value of the rdx register into whatever memory is pointed to by the rax register. The actual value of the rax register does not change.
+</code></pre><p><em>lea</em> : <br></p>
+<p>The lea instruction calculates the address of the second operand, and moves that address in the first. For instance:</p>
+<pre><code class="lang-asm">lea rdi, [rbx+0x10]
+
+# This will move the address rbx+0x10 into the rdi register.
+</code></pre>
+<p><em>add</em> : <br></p>
+<p>adds two values together, and stores the sum in the first arguments.</p>
+<pre><code class="lang-asm">add rax, rdx
+
+# that will set rax equal to rax + rdx
+</code></pre>
+<p><em>sub</em> : subtract the second operand from first and store result in first argument.</p>
+<pre><code class="lang-asm">sub rsp, 0x10
+
+# this will set rsp register equal to rsp - 0x10
+</code></pre>
+<p><em>xor</em> : this will perform binary operation <code>xor</code> on the two arguments its given, and stores the result in the first operation.</p>
+<pre><code class="lang-asm">xor rdx, rax
+</code></pre>
+<p>That will set the <code>rdx</code> register equal to <code>rdx ^ rax.</code></p>
+<p>The <code>and</code> and <code>or</code> operations essentially do the same thing, except with the and or or binary operators.</p>
+<p><em>push</em> : it will push the content of a register into stack.</p>
+<pre><code>push rax
+</code></pre><p><em>pop</em> : it will pop the content of the stack</p>
+<pre><code class="lang-asm">pop rax
+</code></pre>
+<p><em>jmp</em> : The jmp instruction will jump to an instruction address. It is used to redirect code execution. </p>
+<pre><code class="lang-asm">jmp 0x602010
+</code></pre>
+<p><em>call &amp; ret</em> : </p>
+<p>This is similar to the jmp instruction. The difference is it will push the values of rbp and rip onto the stack, then jump to whatever address it is given. This is used for calling functions. After the function is finished, a ret instruction is called which uses the pushed values of rbp and rip (saved base and instruction pointers) it can continue execution right where it left off</p>
+<p><em>jnz / jz</em></p>
+<p>its similar to jump instruction , the diffrence here is it jump if specific flag is set. <code>jnz</code> : jump if not zero. <code>jz</code> jump if zero</p>
+<p><strong>some other important instruction</strong></p>
+<p><code>leaq source, destination</code> : this instruction sets destination to the address denoted by the expression in source</p>
+<p><code>addq source, destination</code>: destination = destination + source</p>
+<p><code>subq source, destination</code>: destination = destination - source</p>
+<p><code>imulq source, destination</code>: destination = destination * source</p>
+<p><code>salq source, destination</code>: destination = destination &lt;&lt; source where &lt;&lt; is the left bit shifting operator</p>
+<p><code>sarq source, destination</code>: destination = destination &gt;&gt; source where &gt;&gt; is the right bit shifting operator</p>
+<p><code>xorq source, destination</code>: destination = destination XOR source</p>
+<p><code>andq source, destination</code>: destination = destination &amp; source</p>
+<p><code>orq source, destination</code>: destination = destination | source</p>
+<hr>
+<p><strong>conditional jump</strong></p>
+<p>If some specified condition is satisfied in conditional jump, the control flow is transferred to a target instruction.</p>
+<p>Following are the conditional jump instructions used on signed data used for arithmetic operations &#x2212;</p>
+<table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Description</th>
+<th>Flags tested</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JE/JZ</td>
+<td>Jump Equal or Jump Zero</td>
+<td>ZF</td>
+</tr>
+<tr>
+<td>JNE/JNZ</td>
+<td>Jump not Equal or Jump Not Zero</td>
+<td>ZF</td>
+</tr>
+<tr>
+<td>JG/JNLE</td>
+<td>Jump Greater or Jump Not Less/Equal</td>
+<td>OF, SF, ZF</td>
+</tr>
+<tr>
+<td>JGE/JNL</td>
+<td>Jump Greater/Equal or Jump Not Less</td>
+<td>OF, SF</td>
+</tr>
+<tr>
+<td>JL/JNGE</td>
+<td>Jump Less or Jump Not Greater/Equal</td>
+<td>OF, SF</td>
+</tr>
+<tr>
+<td>JLE/JNG</td>
+<td>Jump Less/Equal or Jump Not Greater</td>
+<td>OF, SF, ZF</td>
+</tr>
+</tbody>
+</table>
+<p>Following are the conditional jump instructions used on unsigned data used for logical operations &#x2212;</p>
+<table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Description</th>
+<th>Flags tested </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JE/JZ</td>
+<td>Jump Equal or Jump Zero</td>
+<td>ZF</td>
+</tr>
+<tr>
+<td>JNE/JNZ</td>
+<td>Jump not Equal or Jump Not Zero</td>
+<td>ZF</td>
+</tr>
+<tr>
+<td>JA/JNBE</td>
+<td>Jump Above or Jump Not Below/Equal</td>
+<td>CF, ZF</td>
+</tr>
+<tr>
+<td>JAE/JNB</td>
+<td>Jump Above/Equal or Jump Not Below</td>
+<td>CF</td>
+</tr>
+<tr>
+<td>JB/JNAE</td>
+<td>Jump Below or Jump Not Above/Equal</td>
+<td>CF</td>
+</tr>
+<tr>
+<td>JBE/JNA</td>
+<td>Jump Below/Equal or Jump Not Above</td>
+<td>AF, CF</td>
+</tr>
+</tbody>
+</table>
+<p>The following conditional jump instructions have special uses and check the value of flags &#x2212;</p>
+<table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Description</th>
+<th>Flags tested</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JXCZ</td>
+<td>Jump if CX is Zero</td>
+<td>none</td>
+</tr>
+<tr>
+<td>JC</td>
+<td>Jump If Carry</td>
+<td>CF</td>
+</tr>
+<tr>
+<td>JNC</td>
+<td>Jump If No Carry</td>
+<td>CF</td>
+</tr>
+<tr>
+<td>JO</td>
+<td>Jump If Overflow</td>
+<td>OF</td>
+</tr>
+<tr>
+<td>JNO</td>
+<td>Jump If No Overflow</td>
+<td>OF</td>
+</tr>
+<tr>
+<td>JP/JPE</td>
+<td>Jump Parity or Jump Parity Even</td>
+<td>PF</td>
+</tr>
+<tr>
+<td>JNP/JPO</td>
+<td>Jump No Parity or Jump Parity Odd</td>
+<td>PF</td>
+</tr>
+<tr>
+<td>JS</td>
+<td>Jump Sign (negative value)</td>
+<td>SF</td>
+</tr>
+<tr>
+<td>JNS</td>
+<td>Jump No Sign (positive value)</td>
+<td>SF</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="intro.html" class="navigation navigation-prev " aria-label="Previous page: 1. introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="radare2.html" class="navigation navigation-next " aria-label="Next page: 1.2 Radare2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.1 Assembly","level":"11.1.1","depth":2,"next":{"title":"1.2 Radare2","level":"11.1.2","depth":2,"path":"bin_exp/intro/radare2.md","ref":"bin_exp/intro/radare2.md","articles":[]},"previous":{"title":"1. introduction","level":"11.1","depth":1,"path":"bin_exp/intro/intro.md","ref":"bin_exp/intro/intro.md","articles":[{"title":"1.1 Assembly","level":"11.1.1","depth":2,"path":"bin_exp/intro/assembly.md","ref":"bin_exp/intro/assembly.md","articles":[]},{"title":"1.2 Radare2","level":"11.1.2","depth":2,"path":"bin_exp/intro/radare2.md","ref":"bin_exp/intro/radare2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"bin_exp/intro/assembly.md","mtime":"2020-11-23T14:30:00.574Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-06T06:16:42.760Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

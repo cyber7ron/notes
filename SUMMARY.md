@@ -37,13 +37,14 @@
 * [Loops](scripts/5_5.md)
 * [Functions](scripts/5_6.md)
 
-### Passive Information Gathering
+### Information Gathering
 
 * [Website Recon](osint/6_2.md)
 * [Google Hakcing](osint/6_4.md)
 * [Recon-ng](osint/6_6.md)
 * [open-source code](osint/6_7.md)
 * [shodan](osint/6_8.md)
+* [Dns enumeration](osint/dns.md)
 
 ### File Transfers
 
@@ -57,6 +58,10 @@
 * [Method of detecting malicious code](antivirus/17_2.md)
 * [Bypassing AV Detection](antivirus/17_3.md)
 
+### Web Attacks
+
+* [sql injection](web/sql.md)
+	* [upload shell using sql injection](web/sqli_to_shell.md)
 
 ### Active Directory Attacks
 
@@ -66,12 +71,17 @@
 * [Local Privilege Escalation](active_dir/priv_esca.md)
 * [User Hunting](active_dir/user_hunt.md)
 * [Bloodhound](active_dir/bloodhound.md)
+* [Lateral Movement](active_dir/lateral.md)
 
 ### Binary Exploitation
 
 * [1. introduction](bin_exp/intro/intro.md)
 	* [1.1 Assembly](bin_exp/intro/assembly.md)
 	* [1.2 Radare2](bin_exp/intro/radare2.md)
+
+### Sec 660
+
+* [READme](sec660/index.md)
 
 ### Networking
 

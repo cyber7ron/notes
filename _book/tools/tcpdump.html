@@ -1,0 +1,1251 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>tcpdump · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../scripts/5_1.html" />
+    
+    
+    <link rel="prev" href="wireshark.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting comfortable with linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../linux/2_4.html">
+            
+                <a href="../linux/2_4.html">
+            
+                    
+                    finding your way around
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../linux/2_5.html">
+            
+                <a href="../linux/2_5.html">
+            
+                    
+                    managing linux services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../linux/2_6.html">
+            
+                <a href="../linux/2_6.html">
+            
+                    
+                    searching, installing, and removing tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../linux/permission_table.html">
+            
+                <a href="../linux/permission_table.html">
+            
+                    
+                    Permission table
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Command line fun / Text -fu</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../linux/3_1.html">
+            
+                <a href="../linux/3_1.html">
+            
+                    
+                    The Bash Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../linux/3_2.html">
+            
+                <a href="../linux/3_2.html">
+            
+                    
+                    piping and redirection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../linux/3_3.html">
+            
+                <a href="../linux/3_3.html">
+            
+                    
+                    Text searching and manipulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../linux/3_4.html">
+            
+                <a href="../linux/3_4.html">
+            
+                    
+                    Editing files from cmd line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../linux/3_5.html">
+            
+                <a href="../linux/3_5.html">
+            
+                    
+                    Comparing files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../linux/3_6.html">
+            
+                <a href="../linux/3_6.html">
+            
+                    
+                    Managing process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../linux/3_7.html">
+            
+                <a href="../linux/3_7.html">
+            
+                    
+                    File and cmd Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../linux/3_8.html">
+            
+                <a href="../linux/3_8.html">
+            
+                    
+                    curl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../linux/3_9.html">
+            
+                <a href="../linux/3_9.html">
+            
+                    
+                    Customizing Bash environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Practical tools</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="4_1.html">
+            
+                <a href="4_1.html">
+            
+                    
+                    netcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="4_3.html">
+            
+                <a href="4_3.html">
+            
+                    
+                    powershell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="wireshark.html">
+            
+                <a href="wireshark.html">
+            
+                    
+                    Wireshark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.4" data-path="tcpdump.html">
+            
+                <a href="tcpdump.html">
+            
+                    
+                    tcpdump
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Bash Scripting</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../scripts/5_1.html">
+            
+                <a href="../scripts/5_1.html">
+            
+                    
+                    intro to bash scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../scripts/5_2.html">
+            
+                <a href="../scripts/5_2.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../scripts/5_3.html">
+            
+                <a href="../scripts/5_3.html">
+            
+                    
+                    if,else,elif statement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../scripts/5_4.html">
+            
+                <a href="../scripts/5_4.html">
+            
+                    
+                    Boolean Logical Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../scripts/5_5.html">
+            
+                <a href="../scripts/5_5.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../scripts/5_6.html">
+            
+                <a href="../scripts/5_6.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Information Gathering</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../osint/6_2.html">
+            
+                <a href="../osint/6_2.html">
+            
+                    
+                    Website Recon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../osint/6_4.html">
+            
+                <a href="../osint/6_4.html">
+            
+                    
+                    Google Hakcing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../osint/6_6.html">
+            
+                <a href="../osint/6_6.html">
+            
+                    
+                    Recon-ng
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../osint/6_7.html">
+            
+                <a href="../osint/6_7.html">
+            
+                    
+                    open-source code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../osint/6_8.html">
+            
+                <a href="../osint/6_8.html">
+            
+                    
+                    shodan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../osint/dns.html">
+            
+                <a href="../osint/dns.html">
+            
+                    
+                    Dns enumeration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">File Transfers</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../file_transfer/16_1.html">
+            
+                <a href="../file_transfer/16_1.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../file_transfer/16_2.html">
+            
+                <a href="../file_transfer/16_2.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../file_transfer/upgrade_shell.html">
+            
+                <a href="../file_transfer/upgrade_shell.html">
+            
+                    
+                    upgrading Non-interactive shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Antivirus Evasion</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../antivirus/17_1.html">
+            
+                <a href="../antivirus/17_1.html">
+            
+                    
+                    what is antivirus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../antivirus/17_2.html">
+            
+                <a href="../antivirus/17_2.html">
+            
+                    
+                    Method of detecting malicious code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../antivirus/17_3.html">
+            
+                <a href="../antivirus/17_3.html">
+            
+                    
+                    Bypassing AV Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web Attacks</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../web/sql.html">
+            
+                <a href="../web/sql.html">
+            
+                    
+                    sql injection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../web/sqli_to_shell.html">
+            
+                <a href="../web/sqli_to_shell.html">
+            
+                    
+                    upload shell using sql injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Active Directory Attacks</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../active_dir/1.html">
+            
+                <a href="../active_dir/1.html">
+            
+                    
+                    introduction to AD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="4_3.html">
+            
+                <a href="4_3.html">
+            
+                    
+                    powershell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../active_dir/2.html">
+            
+                <a href="../active_dir/2.html">
+            
+                    
+                    Domain Enumeration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../active_dir/priv_esca.html">
+            
+                <a href="../active_dir/priv_esca.html">
+            
+                    
+                    Local Privilege Escalation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="../active_dir/user_hunt.html">
+            
+                <a href="../active_dir/user_hunt.html">
+            
+                    
+                    User Hunting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="../active_dir/bloodhound.html">
+            
+                <a href="../active_dir/bloodhound.html">
+            
+                    
+                    Bloodhound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="../active_dir/lateral.html">
+            
+                <a href="../active_dir/lateral.html">
+            
+                    
+                    Lateral Movement
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Binary Exploitation</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../bin_exp/intro/intro.html">
+            
+                <a href="../bin_exp/intro/intro.html">
+            
+                    
+                    1. introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="../bin_exp/intro/assembly.html">
+            
+                <a href="../bin_exp/intro/assembly.html">
+            
+                    
+                    1.1 Assembly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="../bin_exp/intro/radare2.html">
+            
+                <a href="../bin_exp/intro/radare2.html">
+            
+                    
+                    1.2 Radare2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Sec 660</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../sec660/">
+            
+                <a href="../sec660/">
+            
+                    
+                    READme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Networking</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Crypto</li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >tcpdump</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="tcpdump">tcpdump</h1>
+<p>Tcpdump is a command line utility that allows you to capture and analyze network traffic going through your system. It is often used to help troubleshoot network issues, as well as a security tool.</p>
+<p><em>installation</em></p>
+<p><code>sudo apt install tcpdump</code></p>
+<p><em>Packet capturing options</em></p>
+<table>
+<thead>
+<tr>
+<th>switch</th>
+<th>syntax</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-i any</td>
+<td>tcpdump -i any</td>
+<td>capture from all interface</td>
+</tr>
+<tr>
+<td>-i eth0</td>
+<td>tcpdump -i eth0</td>
+<td>Capture from specific interface ( Ex Eth0)</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>tcpdump -i eth0 -c 10</td>
+<td>Capture first 10 packets and exit</td>
+</tr>
+<tr>
+<td>-D</td>
+<td>tcpdump -D</td>
+<td>Show available interfaces</td>
+</tr>
+<tr>
+<td>-A</td>
+<td>tcpdump -i eth0 -A</td>
+<td>Print in ASCII</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>tcpdump -i eth0 -w tcpdump.txt</td>
+<td>To save capture to a file</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>tcpdump -r tcpdump.txt</td>
+<td>Read and analyze saved capture file</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>tcpdump -n -I eth0</td>
+<td>Do not resolve host names</td>
+</tr>
+<tr>
+<td>-nn</td>
+<td>tcpdump -n -i eth0</td>
+<td>Stop Domain name translation and lookups (Host names or port names )</td>
+</tr>
+<tr>
+<td>tcp</td>
+<td>tcpdump -i eth0 -c 10 -w tcpdump.pcap tcp</td>
+<td>Capture TCP packets only</td>
+</tr>
+<tr>
+<td>port</td>
+<td>tcpdump -i eth0 port 80</td>
+<td>Capture traffic from a defined port only</td>
+</tr>
+<tr>
+<td>host</td>
+<td>tcpdump host 192.168.1.100</td>
+<td>Capture packets from specific host</td>
+</tr>
+<tr>
+<td>net</td>
+<td>cpdump net 10.1.1.0/16</td>
+<td>Capture files from network subnet</td>
+</tr>
+<tr>
+<td>src</td>
+<td>tcpdump src 10.1.1.100</td>
+<td>Capture from a specific source address</td>
+</tr>
+<tr>
+<td>dst</td>
+<td>tcpdump dst 10.1.1.100</td>
+<td>Capture from a specific destination address</td>
+</tr>
+<tr>
+<td><code>&lt;service&gt;</code></td>
+<td>tcpdump http</td>
+<td>Filter traffic based on a port number for a service</td>
+</tr>
+<tr>
+<td><code>&lt;port&gt;</code></td>
+<td>tcpdump port 80</td>
+<td>Filter traffic based on a service</td>
+</tr>
+<tr>
+<td>port range</td>
+<td>tcpdump portrange 21-125</td>
+<td>Filter based on port range</td>
+</tr>
+<tr>
+<td>-S</td>
+<td>tcpdump -S http</td>
+<td>Display entire packet</td>
+</tr>
+<tr>
+<td>ipv6</td>
+<td>tcpdunp -IPV6</td>
+<td>Show only IPV6 packets</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>tcpdump -d tcpdump.pcap</td>
+<td>display human readable form in standard output</td>
+</tr>
+<tr>
+<td>-F</td>
+<td>tcpdump -F tcpdump.pcap</td>
+<td>Use the given file as input for filter</td>
+</tr>
+<tr>
+<td>-I</td>
+<td>tcpdump -I eth0</td>
+<td>set interface as monitor mode</td>
+</tr>
+<tr>
+<td>-L</td>
+<td>tcpdump -L</td>
+<td>Display data link types for the interface</td>
+</tr>
+<tr>
+<td>-N</td>
+<td>tcpdump -N tcpdump.pcap</td>
+<td>not printing domian names</td>
+</tr>
+<tr>
+<td>-K</td>
+<td>tcpdump -K tcpdump.pcap</td>
+<td>Do not verify checksum</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>tcpdump -p -i eth0</td>
+<td>Not capturing in promiscuous mode</td>
+</tr>
+</tbody>
+</table>
+<p><em>Logical Operator</em></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Syntax</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AND</td>
+<td>and, &amp;&amp;</td>
+<td>tcpdump -n src 192.168.1.1 and dst port 21</td>
+<td>Combine filtering options</td>
+</tr>
+<tr>
+<td>OR</td>
+<td>or</td>
+<td>tcpdump dst 10.1.1.1 &amp;&amp; !icmp</td>
+<td>Either of the condition can match</td>
+</tr>
+<tr>
+<td>EXCEPT</td>
+<td>not, !</td>
+<td>tcpdump dst 10.1.1.1 and not icmp</td>
+<td>Negation of the condition</td>
+</tr>
+<tr>
+<td>LESS</td>
+<td>&lt;</td>
+<td>tcpdump &lt;32</td>
+<td>Shows packets size less than 32</td>
+</tr>
+<tr>
+<td>GREATER</td>
+<td>&gt;</td>
+<td>tcpdump &gt;=32</td>
+<td>Shows packets size greater than 32</td>
+</tr>
+</tbody>
+</table>
+<p><em>Output options</em></p>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-q</td>
+<td>Quite and less verbose mode display less details</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>Do not print time stamp details in dump</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>Little verbose output</td>
+</tr>
+<tr>
+<td>-vv</td>
+<td>More verbose output</td>
+</tr>
+<tr>
+<td>-vvv</td>
+<td>Most verbose output</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>Print data and headers in HEX format</td>
+</tr>
+<tr>
+<td>-xx</td>
+<td>Print data with link headers in HEX format</td>
+</tr>
+<tr>
+<td>-X</td>
+<td>Print output in HEX and ASCII format excluding link headers</td>
+</tr>
+<tr>
+<td>-XX</td>
+<td>Print output in HEX and ASCII format including link headers</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>Print Link (Ethernet) headers</td>
+</tr>
+<tr>
+<td>-S</td>
+<td>Print sequence numbers in exact format</td>
+</tr>
+</tbody>
+</table>
+<p><em>protocols</em></p>
+<pre><code class="lang-protocols">Ether, fddi, icmp ,ip, ip6 , ppp, radio, rarp, slip, tcp , udp, wlan
+</code></pre>
+<p><em>Common commands with protocols for filtering captures</em></p>
+<table>
+<thead>
+<tr>
+<th>cmd</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src/ dsthost (host name or IP)</td>
+<td>Filter by source or destination IP address or host</td>
+</tr>
+<tr>
+<td>ether src/ dst host (ethernet host name or IP)</td>
+<td>Ethernet host filtering by source or destination</td>
+</tr>
+<tr>
+<td>src/ dstnet (subnet mask in CIDR)</td>
+<td>Filter by subnet</td>
+</tr>
+<tr>
+<td>tcp/udp src/dst port ( port number)</td>
+<td>Filter TCP or UDP packets by source or destination port</td>
+</tr>
+<tr>
+<td>tcp/udp src/dst port range ( port number range)</td>
+<td>Filter TCP or UDP packets by source or destination port range</td>
+</tr>
+<tr>
+<td>ether/ip broadcast</td>
+<td>Filter for Ethernet or IP broadcasts</td>
+</tr>
+<tr>
+<td>ether/ip multicast</td>
+<td>Filter for Ethernet or IP multicasts</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="wireshark.html" class="navigation navigation-prev " aria-label="Previous page: Wireshark">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../scripts/5_1.html" class="navigation navigation-next " aria-label="Next page: intro to bash scripting">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"tcpdump","level":"4.4","depth":1,"next":{"title":"intro to bash scripting","level":"5.1","depth":1,"path":"scripts/5_1.md","ref":"scripts/5_1.md","articles":[]},"previous":{"title":"Wireshark","level":"4.3","depth":1,"path":"tools/wireshark.md","ref":"tools/wireshark.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tools/tcpdump.md","mtime":"2020-11-21T14:52:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-06T06:16:42.760Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

